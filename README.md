@@ -4,6 +4,8 @@ Welcome to my personal portfolio website! This repository hosts a dynamic and re
 
 This portfolio serves as a comprehensive overview of my technical journey and is intended for recruiters, collaborators, and anyone interested in my work.
 
+---
+
 ## ✨ Features
 
 * **Responsive Design:** Optimized for seamless viewing across all devices (desktop, tablet, mobile).
@@ -24,11 +26,11 @@ This portfolio serves as a comprehensive overview of my technical journey and is
 
 ## 🚀 Technologies Used
 
-* **HTML5:** Structure and content of the website.
+* **HTML5:** Structure and content of the website (`index.html`).
 
-* **CSS3 (Tailwind CSS Framework):** Modern, utility-first styling for a clean and responsive design.
+* **CSS3 (Tailwind CSS Framework):** Modern, utility-first styling defined in `style.css` for a clean and responsive design.
 
-* **JavaScript:** For interactive elements, smooth scrolling, fade-in animations, and horizontal project carousel navigation.
+* **JavaScript:** For interactive elements, smooth scrolling, fade-in animations, and horizontal project carousel navigation, managed in `script.js`.
 
 * **SVG Icons:** Used for GitHub, LinkedIn, and external link indicators.
 
@@ -57,7 +59,7 @@ This portfolio serves as a comprehensive overview of my technical journey and is
 You can view the live version of this portfolio hosted on GitHub Pages:
 
 **\[Your GitHub Pages Link Here\]**
-*(Replace `[Your GitHub Pages Link Here]` with your actual GitHub Pages URL once deployed, e.g., `https://ShashankGoutam.github.io/your-repo-name`)*
+[Portfolio](https://shashankgoutam.github.io/Portfolio/)
 
 ---
 
@@ -71,13 +73,10 @@ To run this project locally:
     git clone [https://github.com/ShashankGoutam/Portfolio.git](https://github.com/ShashankGoutam/Portfolio.git)
     ```
 
-    *(Replace `your-repo-name` with the actual name of your repository)*
-
 2.  **Navigate to the project directory:**
 
     ```bash
-    cd your-repo-name
-
+    cd Portfolio
     ```
 
 3.  **Open `index.html`:**
@@ -98,8 +97,6 @@ I plan to continuously update this portfolio with new projects, skills, and expe
 ---
 
 ## 🤝 Connect with Me
-
-Feel free to connect with me on:
 
 Shashank Goutam
 [GitHub](https://github.com/ShashankGoutam) | [LinkedIn](https://www.linkedin.com/in/shashank-goutam-735924288)
