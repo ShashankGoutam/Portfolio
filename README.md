@@ -58,7 +58,6 @@ This portfolio serves as a comprehensive overview of my technical journey and is
 
 You can view the live version of this portfolio hosted on GitHub Pages:
 
-**\[Your GitHub Pages Link Here\]**
 [Portfolio](https://shashankgoutam.github.io/Portfolio/)
 
 ---
