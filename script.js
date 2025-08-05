@@ -1,57 +1,53 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (link.getAttribute('href').startsWith('#') && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
         });
     });
-});
 
-// Intersection Observer for fade-in animations
-const faders = document.querySelectorAll('.fade-in');
+    // Set current year in footer
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+    
+    // Intersection Observer for fade-in animations
+    const faders = document.querySelectorAll('.fade-in');
+    if ("IntersectionObserver" in window) {
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
 
-const appearOptions = {
-    threshold: 0.2, /* Trigger when 20% of the item is visible */
-    rootMargin: "0px 0px -50px 0px" /* Adjust when it appears slightly earlier */
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } else {
-            entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target); /* Stop observing once it has appeared */
-        }
-    });
-}, appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
-
-// Horizontal scrolling for projects section
-const projectsContainer = document.getElementById('projectsContainer');
-const scrollLeftBtn = document.getElementById('scrollLeftBtn');
-const scrollRightBtn = document.getElementById('scrollRightBtn');
-
-scrollLeftBtn.addEventListener('click', () => {
-    // Scroll by the width of one card + gap
-    const cardWidth = projectsContainer.querySelector('.card').offsetWidth;
-    const gap = parseFloat(getComputedStyle(projectsContainer).gap);
-    projectsContainer.scrollBy({
-        left: -(cardWidth + gap),
-        behavior: 'smooth'
-    });
-});
-
-scrollRightBtn.addEventListener('click', () => {
-    // Scroll by the width of one card + gap
-    const cardWidth = projectsContainer.querySelector('.card').offsetWidth;
-    const gap = parseFloat(getComputedStyle(projectsContainer).gap);
-    projectsContainer.scrollBy({
-        left: (cardWidth + gap),
-        behavior: 'smooth'
-    });
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    } else {
+        // Fallback for older browsers
+        faders.forEach(fader => {
+            fader.classList.add('appear');
+        });
+    }
 });

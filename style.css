@@ -1,73 +1,26 @@
-/* Universal Box Sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-/* General Body and Container Styles */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8fafc; /* Light Slate 50 */
-    color: #1e293b; /* Slate 900 */
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll caused by misaligned elements */
+    background-color: #f8fafc; /* slate-50 */
+    color: #1e293b; /* slate-800 */
 }
-.container {
-    max-width: 1200px;
-    width: 100%; /* Ensure container takes full available width */
-    margin: 0 auto;
-    padding: 1.5rem;
-}
+/* Section Backgrounds */
+#hero { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); min-height: 100vh; }
+#about { background-color: #f0f9ff; } /* sky-50 */
+#skills { background-color: #fdf2f8; } /* pink-50 */
+#experience { background-color: #fafafa; } /* gray-50 */
+#projects { background-color: #f5f3ff; } /* violet-50 */
+#certifications { background-color: #f0fdf4; } /* green-50 */
+#contact { background-color: #f8fafc; } /* slate-50 */
 
-/* Custom Scrollbar Styles */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #e2e8f0; /* Slate 200 */
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background: #64748b; /* Slate 500 */
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #475569; /* Slate 700 */
-}
-
-/* Smooth Fade-in Animation for Sections */
+/* Animations */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .fade-in.appear {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Hero Section Specific Styling */
-#hero {
-    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); /* Blue 500 to Blue 400 */
-    color: white;
-    padding: 6rem 1.5rem; /* Ensure padding on sides for smaller screens */
-    text-align: center;
-    min-height: 100vh; /* Ensure it takes full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    animation: slideInFromTop 1s ease-out forwards;
-}
-#hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    animation: fadeInText 1.5s ease-out forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
 }
 @keyframes slideInFromTop {
     from { transform: translateY(-50px); opacity: 0; }
@@ -77,200 +30,10 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+#hero h1 { animation: slideInFromTop 1s ease-out forwards; }
+#hero p, #hero div { animation: fadeInText 1.5s ease-out forwards; animation-delay: 0.5s; opacity: 0; }
 
-/* Navigation Styling */
-nav {
-    background-color: #1e293b; /* Slate 900 */
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 100%; /* Ensure nav takes full width */
-    overflow-x: auto; /* Allow nav items to scroll if too many on small screen */
-    -webkit-overflow-scrolling: touch;
-}
-nav .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap; /* Prevent nav items from wrapping */
-    padding: 0 1rem; /* Add horizontal padding for nav items */
-}
-nav a {
-    color: #cbd5e1; /* Slate 300 */
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    white-space: nowrap; /* Prevent text wrapping in nav links */
-}
-nav a:hover {
-    background-color: #334155; /* Slate 700 */
-    color: #f1f5f9; /* Slate 100 */
-}
-
-/* Section General Styling */
-section {
-    padding: 4rem 1.5rem; /* Add horizontal padding to all sections */
-    border-bottom: 1px solid #e2e8f0; /* Slate 200 */
-}
-section:last-child {
-    border-bottom: none;
-}
-section h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 2.5rem;
-    text-align: center;
-    color: #1e293b; /* Slate 900 */
-}
-
-/* Specific Section Background Colors */
-#about {
-    background-color: #eff6ff; /* Blue 50 */
-}
-#skills {
-    background-color: #fffbeb; /* Amber 50 */
-}
-#experience {
-    background-color: #ffffff; /* White */
-}
-#projects {
-    background-color: #eef2ff; /* Indigo 50 */
-}
-#certifications {
-    background-color: #ecfdf5; /* Emerald 50 */
-}
-#contact {
-    background-color: #f1f5f9; /* Slate 100 */
-}
-
-/* Card Styling for Projects, Experience etc. */
-.card {
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    padding: 2rem;
-    margin-bottom: 1.5rem; /* Keep for grid layouts */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Ensure cards take full width in their container */
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-.card h3 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #3b82f6; /* Blue 500 */
-    margin-bottom: 0.5rem;
-    display: flex; /* To align icon with text */
-    align-items: center;
-}
-.card h3 a { /* Style for icons within h3 */
-    flex-shrink: 0; /* Prevent icon from shrinking */
-}
-.card p {
-    color: #475569; /* Slate 700 */
-    margin-bottom: 1rem;
-}
-.card ul {
-    list-style: none;
-    padding: 0;
-}
-.card ul li {
-    margin-bottom: 0.5rem;
-    color: #475569; /* Slate 700 */
-    display: flex;
-    align-items: flex-start;
-}
-.card ul li::before {
-    content: '•';
-    color: #3b82f6; /* Blue 500 */
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-    margin-right: 0.5em;
-}
-
-/* Skill Badges */
-.skill-badge {
-    display: inline-block;
-    background-color: #e0f2fe; /* Blue 100 */
-    color: #1e40af; /* Blue 800 */
-    padding: 0.5rem 1rem;
-    border-radius: 9999px; /* Full rounded */
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin: 0.25rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.skill-badge:hover {
-    background-color: #bfdbfe; /* Blue 200 */
-    transform: translateY(-2px);
-}
-
-/* Projects Section Specific Styling for Horizontal Scroll */
-.projects-scroll-wrapper { /* New wrapper to contain scrollable area and buttons */
-    position: relative;
-    width: 100%;
-    max-width: 1200px; /* Match container max-width */
-    margin: 0 auto; /* Center the wrapper */
-    padding: 0 2rem; /* Give space for buttons */
-}
-.projects-scroll-container {
-    overflow-x: scroll; /* Allow scrolling */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    display: flex; /* Ensure items are in a row */
-    gap: 2rem; /* Gap between project cards */
-    padding-bottom: 1rem; /* Space for potential custom scrollbar or just visual padding */
-    width: 100%; /* Ensure it takes full width of its wrapper */
-}
-.projects-scroll-container .card {
-    flex: 0 0 calc(50% - 1rem); /* Two cards per row on larger screens, adjust for gap */
-    min-width: 300px; /* Minimum width for cards to prevent squishing */
-    max-width: 500px; /* Max width for cards */
-    margin-bottom: 0; /* Remove vertical margin from cards inside flex container */
-}
-@media (max-width: 768px) {
-    .projects-scroll-container .card {
-        flex: 0 0 90%; /* One card per row on smaller screens */
-    }
-}
-.scroll-button {
-    background-color: #3b82f6; /* Blue 500 */
-    color: white;
-    padding: 0.75rem 0.5rem; /* Adjusted padding for buttons */
-    border-radius: 9999px; /* Fully rounded */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: absolute; /* Position buttons relative to .projects-scroll-wrapper */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20; /* Ensure buttons are above cards */
-}
-#scrollLeftBtn {
-    left: 0;
-}
-#scrollRightBtn {
-    right: 0;
-}
-
-
-/* Footer Styling */
-footer {
-    background-color: #1e293b; /* Slate 900 */
-    color: #cbd5e1; /* Slate 300 */
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 0.9rem;
-    width: 100%; /* Ensure footer takes full width */
-}
-footer a {
-    color: #60a5fa; /* Blue 400 */
-    transition: color 0.3s ease;
-}
-footer a:hover {
-    color: #3b82f6; /* Blue 500 */
+/* Custom list marker color */
+.marker-sky-500 li::marker {
+    color: #0ea5e9;
 }
