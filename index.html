@@ -1,316 +1,260 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashank Goutam - Personal Portfolio</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
+    <meta name="description" content="Shashank Goutam — Software Engineer focused on backend development, AI/ML, data analytics, and cybersecurity.">
+    <meta name="theme-color" content="#0b1220">
+    <title>Shashank Goutam | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
-
-    <!-- Header -->
-    <header class="sticky top-0 z-50 shadow-md bg-slate-800/80 backdrop-blur-lg">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-bold text-white">Shashank Goutam</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-slate-300 hover:text-sky-400 transition-colors">About</a>
-                <a href="#skills" class="text-slate-300 hover:text-sky-400 transition-colors">Skills</a>
-                <a href="#experience" class="text-slate-300 hover:text-sky-400 transition-colors">Experience</a>
-                <a href="#projects" class="text-slate-300 hover:text-sky-400 transition-colors">Projects</a>
-                <a href="#certifications" class="text-slate-300 hover:text-sky-400 transition-colors">Certifications</a>
-                <a href="#contact" class="text-slate-300 hover:text-sky-400 transition-colors">Contact</a>
+<body>
+    <header class="site-header" id="top">
+        <nav class="nav container" aria-label="Primary navigation">
+            <a class="brand" href="#hero" aria-label="Shashank Goutam home">SG</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <i class="fas fa-bars text-2xl text-white"></i>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 px-6 pb-4">
-             <a href="#about" class="block py-2 text-slate-300 hover:text-sky-400">About</a>
-             <a href="#skills" class="block py-2 text-slate-300 hover:text-sky-400">Skills</a>
-             <a href="#experience" class="block py-2 text-slate-300 hover:text-sky-400">Experience</a>
-             <a href="#projects" class="block py-2 text-slate-300 hover:text-sky-400">Projects</a>
-             <a href="#certifications" class="block py-2 text-slate-300 hover:text-sky-400">Certifications</a>
-             <a href="#contact" class="block py-2 text-slate-300 hover:text-sky-400">Contact</a>
-        </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="flex items-center justify-center text-center text-white p-6">
-            <div>
-                <img src="https://i.ibb.co/6RXbh9yX/IMG-4996-Large.jpg" alt="Shashank Goutam" class="rounded-full shadow-2xl w-40 h-40 object-cover mx-auto mb-6 border-4 border-white/50">
-                <h1 class="text-5xl md:text-7xl font-bold mb-4">Shashank Goutam</h1>
-                <p class="text-xl md:text-2xl text-sky-200 mb-8 max-w-3xl mx-auto">Cybersecurity & AI Enthusiast | Full-Stack Developer</p>
-                <div class="flex justify-center space-x-4">
-                    <a href="https://github.com/ShashankGoutam" target="_blank" rel="noopener noreferrer" class="bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"><i class="fab fa-github mr-2"></i> GitHub</a>
-                    <a href="https://linkedin.com/in/shashank-goutam-735924288" target="_blank" rel="noopener noreferrer" class="bg-sky-500 hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-24 fade-in">
-            <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
-                <div class="md:col-span-3">
-                    <h2 class="text-4xl font-bold text-slate-900 mb-6">About Me</h2>
-                    <p class="text-slate-600 mb-4 text-lg">I'm a passionate and diligent final-year B.Tech Computer Science undergraduate specializing in cybersecurity, AI, and full-stack development. My expertise spans from building secure REST APIs to applying deep learning for computer vision.</p>
-                    <p class="text-slate-600 text-lg">I am committed to continuous learning and am actively seeking internships to solve real-world security, vision, and backend challenges.</p>
-                </div>
-                <div class="md:col-span-2 bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Education</h3>
-                    <div class="text-left">
-                        <p class="font-bold text-sky-700">Manipal Institute of Technology, Bangalore</p>
-                        <p class="font-semibold text-slate-700">B.Tech in Computer Science (Cybersecurity)</p>
-                        <p class="text-slate-500">2022 - 2026</p>
+        <section id="hero" class="hero section">
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow"><span class="status-dot"></span> Computer Science (Cybersecurity) Graduate</span>
+                    <h1>Shashank <span>Goutam</span></h1>
+                    <p class="hero-title">Software Engineer <span>•</span> Backend <span>•</span> AI/ML <span>•</span> Cybersecurity</p>
+                    <p class="hero-description">I build secure backend systems, applied machine learning solutions, and data-driven applications that turn technical problems into practical products.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">View Projects <i class="fa-solid fa-arrow-down"></i></a>
+                        <a class="button button-secondary" href="https://github.com/ShashankGoutam" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a class="button button-secondary" href="https://www.linkedin.com/in/shashank-goutam-735924288/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                     </div>
-                    <div class="text-left mt-4 pt-4 border-t border-slate-200">
-                        <p class="font-bold text-sky-700">Delhi Public School Nacharam, Hyderabad</p>
-                        <p class="font-semibold text-slate-700">Secondary Education</p>
-                        <p class="text-slate-500">2018 - 2022</p>
+                    <div class="hero-stack" aria-label="Primary technologies">
+                        <span>Java / Spring Boot</span><span>Python / ML</span><span>FastAPI</span><span>SQL</span><span>Cybersecurity</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-24 fade-in">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-16 text-slate-900">Technical Skills</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="text-xl font-bold mb-4 text-slate-800">Programming Languages</h3><div><span class="inline-block bg-sky-100 text-sky-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-sky-200 shadow-md">C</span><span class="inline-block bg-sky-100 text-sky-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-sky-200 shadow-md">Python</span><span class="inline-block bg-sky-100 text-sky-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-sky-200 shadow-md">HTML</span><span class="inline-block bg-sky-100 text-sky-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-sky-200 shadow-md">Java</span><span class="inline-block bg-sky-100 text-sky-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-sky-200 shadow-md">JavaScript</span></div></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="text-xl font-bold mb-4 text-slate-800">Machine Learning</h3><div><span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-pink-200 shadow-md">TensorFlow</span><span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-pink-200 shadow-md">Keras</span><span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-pink-200 shadow-md">PyTorch</span><span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-pink-200 shadow-md">OpenCV</span><span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-pink-200 shadow-md">NumPy</span><span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-pink-200 shadow-md">Matplotlib</span><span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-pink-200 shadow-md">CNN</span></div></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="text-xl font-bold mb-4 text-slate-800">Cybersecurity</h3><div><span class="inline-block bg-red-100 text-red-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-red-200 shadow-md">Network Security</span><span class="inline-block bg-red-100 text-red-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-red-200 shadow-md">Vulnerability Assessment</span><span class="inline-block bg-red-100 text-red-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-red-200 shadow-md">Penetration Testing</span></div></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="text-xl font-bold mb-4 text-slate-800">Data Analysis & Visualization</h3><div><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">Pandas</span><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">NumPy</span><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">PowerBI</span><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">Excel</span><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">Matplotlib</span><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">Plotly</span><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">BeautifulSoup</span><span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-200 shadow-md">NLTK</span></div></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="text-xl font-bold mb-4 text-slate-800">Databases</h3><div><span class="inline-block bg-emerald-100 text-emerald-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-200 shadow-md">MySQL</span><span class="inline-block bg-emerald-100 text-emerald-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-200 shadow-md">MongoDB</span></div></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="text-xl font-bold mb-4 text-slate-800">Tools and Technologies</h3><div><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Spring Boot (CRUD)</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">MySQL</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Postman</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">GitHub</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Jupyter</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Financial Modeling Prep API</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Google Colab</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">IBM Watson Studio</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Wireshark</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Metasploit</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">hping3</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Nmap</span><span class="inline-block bg-gray-100 text-gray-800 text-sm font-semibold mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200 shadow-md">Cisco Packet Tracer</span></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-24 fade-in">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-16 text-slate-900">Professional Experience</h2>
-                <div class="max-w-4xl mx-auto space-y-8">
-                    <div class="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-2xl font-bold text-sky-600">Backend Development Intern</h3>
-                                <p class="text-slate-500 mb-3">Uneecops Technologies Ltd. | June 2025 - August 2025</p>
-                            </div>
-                            <a href="https://drive.google.com/file/d/1a7WHWTiTlRSTzHqEbwu0aADJRiWG-uTh/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-600 transition-colors" title="View Certificate"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                        </div>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2 marker-sky-500">
-                            <li>Developed secure RESTful APIs using Spring Boot and integrated with MySQL.</li>
-                            <li>Implemented OAuth2 login and secured API access with Bearer token authentication.</li>
-                            <li>Used Swagger for API documentation and SonarCloud to maintain code quality.</li>
-                        </ul>
+                <div class="hero-card reveal delay-1">
+                    <div class="profile-ring">
+                        <img src="https://i.ibb.co/6RXbh9yX/IMG-4996-Large.jpg" alt="Shashank Goutam">
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-2xl font-bold text-sky-600">Intern, Cisco Virtual Internship Program</h3>
-                                <p class="text-slate-500 mb-3">May 2024 - July 2024</p>
-                            </div>
-                            <a href="https://drive.google.com/file/d/1yggLpjQP4GkLw_AV7HGhBAhivRcXeZyB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-600 transition-colors" title="View Certificate"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                        </div>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2 marker-sky-500">
-                            <li>Gained hands-on experience with network security, firewalls, intrusion detection, and secure network design.</li>
-                            <li>Conducted risk assessment and evaluated threats and vulnerabilities in network environments.</li>
-                            <li>Worked with Cisco Packet Tracer for network simulation and security analysis.</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-2xl font-bold text-sky-600">Business Analytics Intern</h3>
-                                <p class="text-slate-500 mb-3">Corizo | Sept 2024 - Oct 2024</p>
-                            </div>
-                            <a href="https://cert.diceid.com/cid/BpT8WD4fmX" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-600 transition-colors" title="View Certificate"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                        </div>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2 marker-sky-500">
-                            <li>Worked on real-world business case studies involving customer segmentation and profitability analysis.</li>
-                            <li>Leveraged Microsoft Excel (pivot tables, VLOOKUP, conditional formatting, data cleaning) for data analysis and reporting.</li>
-                            <li>Built interactive dashboards and reports using Power BI to track KPIs and present trends.</li>
-                            <li>Applied exploratory data analysis techniques to derive actionable insights from structured datasets.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-24 fade-in">
-            <div class="container mx-auto px-6">
-                <!-- Featured Projects -->
-                <h2 class="text-4xl font-bold text-center mb-16 text-slate-900">Featured Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
-                        <img src="https://raw.githubusercontent.com/ShashankGoutam/Weather_App/refs/heads/main/screenshots/forecast.png" alt="Weather App Screenshot" class="w-full h-56 object-cover object-top" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Weather+App';">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-sky-600 mb-2">Weather App</h3>
-                            <p class="text-slate-600 mb-6 flex-grow">A clean and simple weather application that provides current conditions and a 5-day forecast for any city.</p>
-                            <div class="flex gap-4 mt-auto">
-                                <a href="https://github.com/ShashankGoutam/Weather_App.git" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-slate-900 transition-colors duration-300"><i class="fab fa-github mr-2"></i> See Code</a>
-                                <a href="https://shashankgoutam.github.io/Weather_App/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-sky-500 transition-colors duration-300"><i class="fas fa-external-link-alt mr-2"></i> See Website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
-                        <img src="https://raw.githubusercontent.com/ShashankGoutam/Pomodoro_App/refs/heads/main/screenshot.png" alt="Pomodoro App Screenshot" class="w-full h-56 object-cover object-top" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Pomodoro+App';">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-sky-600 mb-2">Pomodoro App</h3>
-                            <p class="text-slate-600 mb-6 flex-grow">A productivity timer based on the Pomodoro Technique to help you focus on your tasks and take effective breaks.</p>
-                            <div class="flex gap-4 mt-auto">
-                                <a href="https://github.com/ShashankGoutam/Pomodoro_App.git" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-slate-900 transition-colors duration-300"><i class="fab fa-github mr-2"></i> See Code</a>
-                                <a href="https://shashankgoutam.github.io/Pomodoro_App/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-sky-500 transition-colors duration-300"><i class="fas fa-external-link-alt mr-2"></i> See Website</a>
-                            </div>
+                    <div class="hero-card-content">
+                        <p class="card-label">Currently focused on</p>
+                        <h2>Building reliable software with data and AI.</h2>
+                        <div class="mini-stats">
+                            <div><strong>Backend</strong><span>APIs & Systems</span></div>
+                            <div><strong>AI / ML</strong><span>Applied Solutions</span></div>
+                            <div><strong>Security</strong><span>Secure Design</span></div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Other Projects -->
-                <h2 class="text-4xl font-bold text-center mb-16 text-slate-900">Other Noteworthy Projects</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start mb-2"><h3 class="text-xl font-bold text-sky-600">Employee Management System</h3><a href="https://github.com/ShashankGoutam/EmployeeManagement_SpringBoot.git" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-sky-600"><i class="fab fa-github fa-lg"></i></a></div>
-                        <p class="text-slate-500 text-sm mb-3">Java, Spring Boot, MySQL, OAuth2, Redis</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 text-sm flex-grow marker-sky-500"><li>Designed a RESTful CRUD API with validation and exception handling.</li><li>Implemented Google/GitHub login using OAuth2.</li><li>Configured Swagger for documentation and SonarCloud for code analysis.</li><li>Introduced Redis caching to optimize API performance.</li></ul>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start mb-2"><h3 class="text-xl font-bold text-sky-600">Waste Classification</h3><a href="https://github.com/ShashankGoutam/Classify-Waste-Products-Using-Transfer-Learning.git" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-sky-600"><i class="fab fa-github fa-lg"></i></a></div>
-                        <p class="text-slate-500 text-sm mb-3">TensorFlow, Keras, IBM Watson CV</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 text-sm flex-grow marker-sky-500"><li>Developed a multi-class waste image classifier using pre-trained CNNs.</li><li>Fine-tuned layers, applied data augmentation, and early stopping.</li><li>Achieved 85% validation accuracy with K-fold cross-validation.</li></ul>
-                    </div>
-                     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start mb-2"><h3 class="text-xl font-bold text-sky-600">Social Media Sentiment Analysis</h3><a href="https://github.com/ShashankGoutam/Social_Media_Sentiment_Anlaysis.git" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-sky-600"><i class="fab fa-github fa-lg"></i></a></div>
-                        <p class="text-slate-500 text-sm mb-3">Python, PRAW, TextBlob, Pandas</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 text-sm flex-grow marker-sky-500"><li>Extracted Reddit posts from multiple subreddits using PRAW.</li><li>Performed sentiment analysis using TextBlob polarity scores.</li><li>Preprocessed text using regex and stopword filtering.</li></ul>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start mb-2"><h3 class="text-xl font-bold text-sky-600">Image Classification</h3><a href="https://github.com/ShashankGoutam/Transfer-Learning-for-Image-Classification-with-PyTorch.git" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-sky-600"><i class="fab fa-github fa-lg"></i></a></div>
-                        <p class="text-slate-500 text-sm mb-3">PyTorch, IBM Watson CV, NumPy</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 text-sm flex-grow marker-sky-500"><li>Built a model using PyTorch and transfer learning.</li><li>Automated data handling via IBM's CV Studio.</li><li>Achieved 80% validation accuracy.</li></ul>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start mb-2"><h3 class="text-xl font-bold text-sky-600">Social Media Insights</h3><a href="https://github.com/ShashankGoutam/Social-Media-Insights.git" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-sky-600"><i class="fab fa-github fa-lg"></i></a></div>
-                        <p class="text-slate-500 text-sm mb-3">Python, NLTK, Pandas, Plotly</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 text-sm flex-grow marker-sky-500"><li>Analyzed tweets across categories using NLP.</li><li>Cleaned and categorized tweets to remove noise.</li><li>Created interactive visualizations with Plotly.</li></ul>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="flex justify-between items-start mb-2"><h3 class="text-xl font-bold text-sky-600">Intrusion Detection System</h3><a href="https://github.com/ShashankGoutam/AI_ML_IntrusionDetectionSystem.git" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-sky-600"><i class="fab fa-github fa-lg"></i></a></div>
-                        <p class="text-slate-500 text-sm mb-3">Scikit-learn, Pandas, NSL-KDD</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 text-sm flex-grow marker-sky-500"><li>Implemented an IDS using a Random Forest.</li><li>Achieved 99.78% validation accuracy.</li><li>Developed a CLI tool to predict traffic behavior.</li></ul>
+        <section id="about" class="section section-light">
+            <div class="container two-column">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">01 / ABOUT</span>
+                    <h2>Engineering with a practical mindset.</h2>
+                </div>
+                <div class="about-copy reveal delay-1">
+                    <p>I'm a Computer Science (Cybersecurity) graduate from Manipal Institute of Technology with experience across backend development, machine learning, data analytics, and customer success.</p>
+                    <p>I've built secure REST APIs with Spring Boot, developed ML-powered applications with Python and Scikit-learn, and worked with client teams to improve CRM workflows and product adoption.</p>
+                    <p>I enjoy working at the intersection of software engineering, data, and applied AI—building solutions that are useful, maintainable, and grounded in real-world requirements.</p>
+                    <div class="education-card">
+                        <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div>
+                            <span class="card-label">Education</span>
+                            <h3>Manipal Institute of Technology, Bengaluru</h3>
+                            <p>B.Tech in Computer Science (Cybersecurity) <span>•</span> 2022–2026</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications" class="py-24 fade-in">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-16 text-slate-900">Certifications</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">IBM AI Engineering Professional</h3><a href="https://coursera.org/share/f92e9c486aa7918325690214c9d10614" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">Machine Learning with Python</h3><a href="https://coursera.org/share/23aa9aaf9ff6e6cb45ff63feea562152" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">Data Analysis with Python</h3><a href="https://coursera.org/share/e68900616aa96606bea5c072df5ac3db" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">Python for Data Science, AI & Dev</h3><a href="https://coursera.org/share/de907c2dcab827ced97a0e10db216ef9" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">Oracle SQL Databases</h3><a href="https://coursera.org/share/a62d38f59e7eec2b832c108e71337407" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">Deep Learning Essentials with Keras</h3><a href="https://coursera.org/share/bed4c3001cbaff34bbc513e56e03a00d" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">Foundations of Cybersecurity</h3><a href="https://coursera.org/share/5eafcb9196e495fefb335bb6f3f9ef21" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"><h3 class="font-bold text-lg text-sky-600 mb-2">Assets, Threats & Vulnerabilities</h3><a href="https://coursera.org/share/97540dba887f218732ddee78a9cbab32" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:underline font-semibold">View Certificate <i class="fas fa-external-link-alt text-xs ml-1"></i></a></div>
+        <section id="skills" class="section section-soft">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="section-kicker">02 / SKILLS</span>
+                    <h2>Tools I use to build.</h2>
+                    <p>A focused stack spanning backend engineering, applied AI/ML, analytics, databases, and security.</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon blue"><i class="fa-solid fa-code"></i></div>
+                        <h3>Backend & Software</h3>
+                        <div class="chips"><span>Java</span><span>Spring Boot</span><span>FastAPI</span><span>REST APIs</span><span>Spring Security</span><span>OAuth2</span><span>SQLAlchemy</span></div>
+                    </article>
+                    <article class="skill-card reveal delay-1">
+                        <div class="skill-icon purple"><i class="fa-solid fa-brain"></i></div>
+                        <h3>AI / Machine Learning</h3>
+                        <div class="chips"><span>Python</span><span>Scikit-learn</span><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>OpenCV</span></div>
+                    </article>
+                    <article class="skill-card reveal delay-2">
+                        <div class="skill-icon cyan"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Data & Analytics</h3>
+                        <div class="chips"><span>Pandas</span><span>NumPy</span><span>Power BI</span><span>Excel</span><span>Matplotlib</span><span>Plotly</span></div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon green"><i class="fa-solid fa-database"></i></div>
+                        <h3>Databases & Tools</h3>
+                        <div class="chips"><span>MySQL</span><span>PostgreSQL</span><span>SQLite</span><span>MongoDB</span><span>Redis</span><span>Git</span><span>Docker</span><span>Swagger</span><span>JUnit</span><span>Mockito</span><span>SonarCloud</span></div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 fade-in">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold text-center mb-8 text-slate-900">Contact Me</h2>
-                <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-10">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-x-12 gap-y-6 text-lg">
-                    <a href="mailto:shashankgoutam73@gmail.com" class="font-medium text-slate-700 hover:text-sky-600 transition-colors duration-300"><i class="fas fa-envelope fa-fw mr-3"></i>shashankgoutam73@gmail.com</a>
-                    <a href="tel:+916305686200" class="font-medium text-slate-700 hover:text-sky-600 transition-colors duration-300"><i class="fas fa-phone fa-fw mr-3"></i>+91 6305686200</a>
+        <section id="experience" class="section section-light">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="section-kicker">03 / EXPERIENCE</span>
+                    <h2>Professional experience.</h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">Jan 2026 — Jul 2026</div>
+                        <div class="timeline-card">
+                            <div class="timeline-top"><div><h3>Customer Success Manager Intern (KAM)</h3><p class="company">LeadSquared <span>•</span> Bengaluru</p></div><span class="role-tag">Key Account Management</span></div>
+                            <ul>
+                                <li>Managed client accounts by analyzing workflows, identifying inefficiencies, and recommending product and process optimizations.</li>
+                                <li>Analyzed product usage and account health to identify adoption gaps, growth opportunities, and retention risks.</li>
+                                <li>Collaborated with client stakeholders to resolve issues, configure solutions, and improve CRM workflows and product adoption.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal delay-1">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">Jun 2025 — Aug 2025</div>
+                        <div class="timeline-card">
+                            <div class="timeline-top"><div><h3>Backend Development Intern</h3><p class="company">Uneecops <span>•</span> Remote</p></div><span class="role-tag">Backend Engineering</span></div>
+                            <ul>
+                                <li>Built secure REST APIs using Spring Boot and MySQL with OAuth2 authentication.</li>
+                                <li>Achieved 80%+ test coverage and documented APIs using Swagger.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-soft">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="section-kicker">04 / PROJECTS</span>
+                    <h2>Selected work.</h2>
+                    <p>Projects that best represent my current backend, AI/ML, analytics, and cybersecurity experience.</p>
+                </div>
+
+                <div class="featured-grid">
+                    <article class="project-card featured reveal">
+                        <div class="project-number">01</div>
+                        <div class="project-top"><span class="project-type">Featured Project</span><a href="https://github.com/ShashankGoutam/AI-Based-Lead-Scoring-Analytics-System" target="_blank" rel="noopener noreferrer" aria-label="Lead scoring GitHub repository"><i class="fa-brands fa-github"></i></a></div>
+                        <h3>AI-Based Lead Scoring & Analytics System</h3>
+                        <p>End-to-end ML application for lead conversion prediction using Gradient Boosting, stratified validation, class-weighted learning, FastAPI inference, SQLAlchemy persistence, and a React analytics dashboard.</p>
+                        <div class="chips"><span>Python</span><span>Scikit-learn</span><span>FastAPI</span><span>React</span><span>SQLAlchemy</span><span>Docker</span></div>
+                        <div class="project-footer"><span class="metric">ROC-AUC <strong>0.802</strong></span><a class="text-link" href="https://github.com/ShashankGoutam/AI-Based-Lead-Scoring-Analytics-System" target="_blank" rel="noopener noreferrer">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </article>
+                    <article class="project-card featured reveal delay-1">
+                        <div class="project-number">02</div>
+                        <div class="project-top"><span class="project-type">Featured Project</span><a href="https://github.com/ShashankGoutam/EmployeeManagement_SpringBoot" target="_blank" rel="noopener noreferrer" aria-label="Employee management GitHub repository"><i class="fa-brands fa-github"></i></a></div>
+                        <h3>Employee Management System</h3>
+                        <p>Production-oriented Spring Boot REST API with validation, exception handling, Redis caching, OAuth2 authentication, automated testing, Swagger documentation, and SonarCloud quality checks.</p>
+                        <div class="chips"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>Redis</span><span>OAuth2</span><span>JUnit</span></div>
+                        <div class="project-footer"><span class="metric">API <strong>+ Security</strong></span><a class="text-link" href="https://github.com/ShashankGoutam/EmployeeManagement_SpringBoot" target="_blank" rel="noopener noreferrer">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </article>
+                    <article class="project-card featured reveal delay-2">
+                        <div class="project-number">03</div>
+                        <div class="project-top"><span class="project-type">Featured Project</span><a href="https://github.com/ShashankGoutam/AI_ML_IntrusionDetectionSystem" target="_blank" rel="noopener noreferrer" aria-label="Intrusion detection GitHub repository"><i class="fa-brands fa-github"></i></a></div>
+                        <h3>Intrusion Detection System</h3>
+                        <p>Machine-learning-based IDS using Random Forest on the NSL-KDD dataset, supporting binary and multi-class attack classification with model evaluation and prediction reporting.</p>
+                        <div class="chips"><span>Python</span><span>Scikit-learn</span><span>Random Forest</span><span>NSL-KDD</span><span>Cybersecurity</span></div>
+                        <div class="project-footer"><span class="metric">Focus <strong>Network Security</strong></span><a class="text-link" href="https://github.com/ShashankGoutam/AI_ML_IntrusionDetectionSystem" target="_blank" rel="noopener noreferrer">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </article>
+                </div>
+
+                <div class="subsection-heading reveal"><h3>More projects</h3><a href="https://github.com/ShashankGoutam?tab=repositories" target="_blank" rel="noopener noreferrer">View all repositories <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                <div class="project-grid">
+                    <article class="project-card compact reveal">
+                        <div class="project-top"><span class="project-type">AI / RAG</span><a href="https://github.com/ShashankGoutam/RAG_Crawler" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></div>
+                        <h3>RAG Crawler</h3>
+                        <p>Domain-limited crawl → index → ask pipeline using FAISS and sentence-transformer embeddings, with grounded retrieval, source mapping, prompt hardening, and refusal when evidence is insufficient.</p>
+                        <div class="chips"><span>Python</span><span>FastAPI</span><span>FAISS</span><span>RAG</span></div>
+                    </article>
+                    <article class="project-card compact reveal delay-1">
+                        <div class="project-top"><span class="project-type">Computer Vision</span><a href="https://github.com/ShashankGoutam/Transfer-Learning-for-Image-Classification-with-PyTorch" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></div>
+                        <h3>Image Classification</h3>
+                        <p>Transfer-learning image classifier built with pre-trained CNNs in PyTorch, with automated dataset handling and hyperparameter experimentation.</p>
+                        <div class="chips"><span>PyTorch</span><span>CNN</span><span>Transfer Learning</span></div>
+                    </article>
+                    <article class="project-card compact reveal delay-2">
+                        <div class="project-top"><span class="project-type">Computer Vision</span><a href="https://github.com/ShashankGoutam/Classify-Waste-Products-Using-Transfer-Learning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></div>
+                        <h3>Waste Classification</h3>
+                        <p>Multi-class waste image classifier using pre-trained CNNs, fine-tuning, data augmentation, early stopping, and cross-validation.</p>
+                        <div class="chips"><span>TensorFlow</span><span>Keras</span><span>Computer Vision</span></div>
+                    </article>
+                    <article class="project-card compact reveal">
+                        <div class="project-top"><span class="project-type">Data Analytics</span><a href="https://github.com/ShashankGoutam/Social-Media-Insights" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></div>
+                        <h3>Social Media Insights</h3>
+                        <p>Analyzed and categorized social media data using NLP and created interactive Plotly visualizations to surface engagement trends and actionable insights.</p>
+                        <div class="chips"><span>Python</span><span>NLTK</span><span>Pandas</span><span>Plotly</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section section-light">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="section-kicker">05 / CERTIFICATIONS</span>
+                    <h2>Learning beyond the classroom.</h2>
+                </div>
+                <div class="cert-grid">
+                    <article class="cert-card reveal"><div class="cert-icon"><i class="fa-solid fa-robot"></i></div><div><h3>IBM AI Engineering</h3><p>IBM</p></div></article>
+                    <article class="cert-card reveal delay-1"><div class="cert-icon"><i class="fa-solid fa-chart-column"></i></div><div><h3>Data Analysis with Python</h3><p>IBM</p></div></article>
+                    <article class="cert-card reveal delay-2"><div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div><div><h3>Google Cybersecurity Foundations</h3><p>Google</p></div></article>
+                    <article class="cert-card reveal"><div class="cert-icon"><i class="fa-solid fa-database"></i></div><div><h3>Oracle SQL Databases</h3><p>Oracle</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section">
+            <div class="container contact-inner reveal">
+                <span class="section-kicker">06 / CONTACT</span>
+                <h2>Let's build something useful.</h2>
+                <p>Interested in backend engineering, AI/ML, data, or cybersecurity? I'd be happy to connect.</p>
+                <div class="contact-actions">
+                    <a class="button button-primary" href="mailto:shashankgoutam04@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
+                    <a class="button button-secondary dark-button" href="https://www.linkedin.com/in/shashank-goutam-735924288/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a class="button button-secondary dark-button" href="https://github.com/ShashankGoutam" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center space-x-8 text-3xl mb-6">
-                <a href="https://github.com/ShashankGoutam" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors duration-300"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/shashank-goutam-735924288" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <p>&copy; <span id="year"></span> Shashank Goutam. Designed with <span class="text-red-500">&hearts;</span></p>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Shashank Goutam</span>
+            <a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </footer>
 
-    <!-- Embedded JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            // Close mobile menu on link click
-            document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (link.getAttribute('href').startsWith('#') && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                });
-            });
-
-            // Set current year in footer
-            const yearSpan = document.getElementById('year');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-            
-            // Intersection Observer for fade-in animations
-            const faders = document.querySelectorAll('.fade-in');
-            if ("IntersectionObserver" in window) {
-                const appearOptions = {
-                    threshold: 0.1,
-                    rootMargin: "0px 0px -50px 0px"
-                };
-                
-                const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('appear');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, appearOptions);
-
-                faders.forEach(fader => {
-                    appearOnScroll.observe(fader);
-                });
-            } else {
-                // Fallback for older browsers
-                faders.forEach(fader => {
-                    fader.classList.add('appear');
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
