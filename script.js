@@ -22,6 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Progressive section palette: light at About, gradually deeper blue through Certifications.
+    const sectionColors = {
+        about: '#F8FBFF',
+        skills: '#EAF3FA',
+        experience: '#DCEBF4',
+        projects: '#C9DFEB',
+        certifications: '#AFCBDA'
+    };
+
+    Object.entries(sectionColors).forEach(([id, color]) => {
+        const section = document.getElementById(id);
+        if (section) section.style.backgroundColor = color;
+    });
+
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
