@@ -1,53 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
 
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+            menuToggle.innerHTML = open
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open navigation');
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
         });
     }
 
-    // Close mobile menu on link click
-    document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (link.getAttribute('href').startsWith('#') && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    });
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
 
-    // Set current year in footer
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-    
-    // Intersection Observer for fade-in animations
-    const faders = document.querySelectorAll('.fade-in');
-    if ("IntersectionObserver" in window) {
-        const appearOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-        
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
                 }
             });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
+        }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+        reveals.forEach(el => observer.observe(el));
     } else {
-        // Fallback for older browsers
-        faders.forEach(fader => {
-            fader.classList.add('appear');
-        });
+        reveals.forEach(el => el.classList.add('visible'));
     }
 });
