@@ -9,20 +9,21 @@ The portfolio is designed as a clean, fluid, rounded single-page experience for 
 - **Modern responsive design** — Optimized for desktop, tablet, and mobile screens.
 - **Fluid rounded UI** — Soft cards, pill-shaped technology tags, gradients, subtle shadows, and glass-style elements.
 - **Dark hero and contact sections** — Strong visual framing around the main portfolio content.
+- **Progressive section color system** — The main content moves from almost-white through progressively deeper blue tones from About to Certifications, naturally resolving into the deep-navy Contact section.
 - **Scroll-reveal animations** — Sections and cards animate into view as the user scrolls.
 - **Mobile navigation** — Collapsible navigation menu for smaller screens.
 - **Structured portfolio sections** — About, Skills, Experience, Projects, Certifications, and Contact.
 - **Featured projects** — Highlights the AI-Based Lead Scoring & Analytics System, Employee Management System, and Intrusion Detection System.
 - **Project repository links** — Project cards link directly to their corresponding GitHub repositories through the project links.
-- **No redundant project GitHub buttons** — Featured project cards use the numbered visual treatment and the **View project** action instead of a separate GitHub icon in the card header.
+- **No redundant featured-project GitHub buttons** — Featured project cards use the numbered visual treatment and the **View project** action instead of a separate GitHub icon in the card header.
 - **Accessibility-conscious interactions** — Includes ARIA labels/states, reduced-motion support, and semantic HTML structure.
 - **GitHub Pages ready** — The site is a static frontend and requires no backend server.
 
 ## 🧰 Technologies Used
 
 - **HTML5** — Semantic page structure and portfolio content.
-- **CSS3** — Custom responsive styling, gradients, rounded components, animations, layout, and visual system defined in `style.css`.
-- **JavaScript** — Mobile navigation, dynamic copyright year, and IntersectionObserver-based reveal animations in `script.js`.
+- **CSS3** — Custom responsive styling, gradients, rounded components, animations, layout, and the core visual design system defined in `style.css`.
+- **JavaScript** — Mobile navigation, progressive section color application, dynamic copyright year, and IntersectionObserver-based reveal animations in `script.js`.
 - **Inter** — Primary typography loaded from Google Fonts.
 - **Font Awesome** — Interface and social icons.
 
@@ -54,7 +55,7 @@ The project showcase is divided into **Featured Projects** and **More Projects**
 
 Additional work includes RAG Crawler, Image Classification, Waste Classification, and Social Media Insights.
 
-Each project includes a concise description, relevant technology tags, and a direct project/repository action where applicable.
+Each project includes a concise description, relevant technology tags, and a direct project/repository action where applicable. Featured projects retain the large numbered `01`, `02`, and `03` visual treatment and use **View project** as the repository action.
 
 ### Certifications
 Displays selected professional certifications in a compact card layout.
@@ -64,13 +65,28 @@ Provides direct ways to connect through email, LinkedIn, and GitHub. No phone nu
 
 ## 🎨 Visual Design
 
-The current design uses a cohesive **navy, blue, cyan, purple, and green** accent system with light neutral surfaces. The visual language emphasizes:
+The portfolio uses a cohesive **navy, blue, and cyan** accent system with a progressive background palette across the main content:
+
+| Section | Background | Character |
+|---|---|---|
+| **Hero** | `#07101E` | Deep navy |
+| **About** | `#F8FBFF` | Almost white |
+| **Skills** | `#EAF3FA` | Very light blue |
+| **Experience** | `#DCEBF4` | Soft blue-gray |
+| **Projects** | `#C9DFEB` | Noticeably deeper blue |
+| **Certifications** | `#AFCBDA` | Muted slate-blue |
+| **Contact** | `#07101E` | Deep navy |
+
+The progression is intended to make the page feel like one continuous visual journey from light to deep color rather than a collection of unrelated section backgrounds.
+
+The visual language emphasizes:
 
 - Rounded 20–28px cards
 - Subtle shadows and borders
 - Blue/cyan gradients
-- Dark navy hero/contact areas
-- Light section backgrounds for content separation
+- Large, restrained project numbering
+- Progressive blue-toned section backgrounds
+- Dark navy hero/contact framing
 - Responsive layouts and restrained motion
 
 The design is intentionally professional and technical rather than heavily decorative.
@@ -97,8 +113,8 @@ Open `index.html` in a browser. Because the portfolio is a static site, no backe
 ```text
 Portfolio/
 ├── index.html    # Portfolio structure and content
-├── style.css     # Responsive styling and visual design system
-├── script.js     # Navigation and scroll interactions
+├── style.css     # Responsive styling and core visual design system
+├── script.js     # Navigation, progressive colors, and scroll interactions
 └── README.md     # Project documentation
 ```
 
