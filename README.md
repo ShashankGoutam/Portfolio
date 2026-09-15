@@ -1,103 +1,118 @@
-# Shashank Goutam - Personal Portfolio
+# Shashank Goutam — Personal Portfolio
 
-Welcome to my personal portfolio website! This repository hosts a dynamic and responsive web application designed to showcase my skills, projects, experience, and certifications in cybersecurity, artificial intelligence, and full-stack development.
+A modern, responsive personal portfolio for **Shashank Goutam**, a Computer Science (Cybersecurity) graduate focused on software engineering, backend development, AI/ML, data analytics, and cybersecurity.
 
-This portfolio serves as a comprehensive overview of my technical journey and is intended for recruiters, collaborators, and anyone interested in my work.
-
----
+The portfolio is designed as a clean, fluid, rounded single-page experience for recruiters, collaborators, and anyone interested in my work.
 
 ## ✨ Features
 
-* **Responsive Design:** Optimized for seamless viewing across all devices (desktop, tablet, mobile).
+- **Modern responsive design** — Optimized for desktop, tablet, and mobile screens.
+- **Fluid rounded UI** — Soft cards, pill-shaped technology tags, gradients, subtle shadows, and glass-style elements.
+- **Dark hero and contact sections** — Strong visual framing around the main portfolio content.
+- **Scroll-reveal animations** — Sections and cards animate into view as the user scrolls.
+- **Mobile navigation** — Collapsible navigation menu for smaller screens.
+- **Structured portfolio sections** — About, Skills, Experience, Projects, Certifications, and Contact.
+- **Featured projects** — Highlights the AI-Based Lead Scoring & Analytics System, Employee Management System, and Intrusion Detection System.
+- **Project repository links** — Project cards link directly to their corresponding GitHub repositories through the project links.
+- **No redundant project GitHub buttons** — Featured project cards use the numbered visual treatment and the **View project** action instead of a separate GitHub icon in the card header.
+- **Accessibility-conscious interactions** — Includes ARIA labels/states, reduced-motion support, and semantic HTML structure.
+- **GitHub Pages ready** — The site is a static frontend and requires no backend server.
 
-* **Smooth Animations:** Engaging scroll-triggered fade-in animations for sections and interactive elements.
+## 🧰 Technologies Used
 
-* **Detailed Sections:** Dedicated sections for About Me, Skills, Experience, Projects, Certifications, and Contact Information.
+- **HTML5** — Semantic page structure and portfolio content.
+- **CSS3** — Custom responsive styling, gradients, rounded components, animations, layout, and visual system defined in `style.css`.
+- **JavaScript** — Mobile navigation, dynamic copyright year, and IntersectionObserver-based reveal animations in `script.js`.
+- **Inter** — Primary typography loaded from Google Fonts.
+- **Font Awesome** — Interface and social icons.
 
-* **Interactive Project Showcase:** Projects are displayed in a horizontally scrollable carousel with navigation buttons, allowing for easy browsing.
+## 📂 Portfolio Sections
 
-* **Direct Links:** Quick access to individual GitHub repositories for projects and direct links to obtained certifications.
+### Home
+Introduces my current focus as a Software Engineer across backend development, AI/ML, and cybersecurity, with quick links to GitHub and LinkedIn.
 
-* **Professional Branding:** Integrated LinkedIn and GitHub logos in the hero section for easy access to my professional profiles.
+### About
+Provides a concise overview of my Computer Science (Cybersecurity) background, practical engineering interests, and education at Manipal Institute of Technology, Bengaluru.
 
-* **Tasteful Backgrounds:** Each section features a distinct, subtle background color to enhance visual separation and appeal.
+### Skills
+Organizes my technical stack into four areas:
 
----
+- Backend & Software
+- AI / Machine Learning
+- Data & Analytics
+- Databases & Tools
 
-## 🚀 Technologies Used
+### Experience
+Highlights my internships at LeadSquared and Uneecops, including customer success/key account management and backend engineering experience.
 
-* **HTML5:** Structure and content of the website (`index.html`).
+### Projects
+The project showcase is divided into **Featured Projects** and **More Projects**. Featured work includes:
 
-* **CSS3 (Tailwind CSS Framework):** Modern, utility-first styling defined in `style.css` for a clean and responsive design.
+- AI-Based Lead Scoring & Analytics System
+- Employee Management System
+- Intrusion Detection System
 
-* **JavaScript:** For interactive elements, smooth scrolling, fade-in animations, and horizontal project carousel navigation, managed in `script.js`.
+Additional work includes RAG Crawler, Image Classification, Waste Classification, and Social Media Insights.
 
-* **SVG Icons:** Used for GitHub, LinkedIn, and external link indicators.
+Each project includes a concise description, relevant technology tags, and a direct project/repository action where applicable.
 
----
+### Certifications
+Displays selected professional certifications in a compact card layout.
 
-## 📂 Sections Overview
+### Contact
+Provides direct ways to connect through email, LinkedIn, and GitHub. No phone number is displayed on the portfolio.
 
-* **Home:** A welcoming introduction to my portfolio with quick links to my LinkedIn and GitHub profiles.
+## 🎨 Visual Design
 
-* **About Me:** A brief summary of my background, education, and career aspirations.
+The current design uses a cohesive **navy, blue, cyan, purple, and green** accent system with light neutral surfaces. The visual language emphasizes:
 
-* **Skills:** A comprehensive list of my programming languages, machine learning expertise, cybersecurity knowledge, data analysis tools, databases, and general tools & technologies.
+- Rounded 20–28px cards
+- Subtle shadows and borders
+- Blue/cyan gradients
+- Dark navy hero/contact areas
+- Light section backgrounds for content separation
+- Responsive layouts and restrained motion
 
-* **Experience:** Details of my internships, including key responsibilities and achievements, with links to relevant certificates.
+The design is intentionally professional and technical rather than heavily decorative.
 
-* **Projects:** A showcase of my key projects, each with a description, tech stack, and a direct link to its GitHub repository.
+## 🌐 Live Portfolio
 
-* **Certifications:** A list of my professional certifications with direct links to verify them.
+The portfolio is hosted using GitHub Pages:
 
-* **Contact Me:** All necessary contact information for inquiries and collaborations.
+**https://shashankgoutam.github.io/Portfolio/**
 
----
+## 🚀 Local Development
 
-## 🌐 How to View
+Clone the repository:
 
-You can view the live version of this portfolio hosted on GitHub Pages:
+```bash
+git clone https://github.com/ShashankGoutam/Portfolio.git
+cd Portfolio
+```
 
-[Portfolio](https://shashankgoutam.github.io/Portfolio/)
+Open `index.html` in a browser. Because the portfolio is a static site, no backend or package installation is required for the basic local version.
 
----
+## 📁 Main Files
 
-## 🛠️ Local Development
+```text
+Portfolio/
+├── index.html    # Portfolio structure and content
+├── style.css     # Responsive styling and visual design system
+├── script.js     # Navigation and scroll interactions
+└── README.md     # Project documentation
+```
 
-To run this project locally:
+## 🔮 Future Enhancements
 
-1.  **Clone the repository:**
+Potential future improvements include:
 
-    ```bash
-    git clone [https://github.com/ShashankGoutam/Portfolio.git](https://github.com/ShashankGoutam/Portfolio.git)
-    ```
+- Adding a downloadable resume once a stable resume file/link is available.
+- Adding dedicated project detail pages or richer project case studies.
+- Adding technical articles or a blog section.
+- Further visual refinement and interactive portfolio elements.
 
-2.  **Navigate to the project directory:**
+## 🤝 Connect
 
-    ```bash
-    cd Portfolio
-    ```
-
-3.  **Open `index.html`:**
-    Simply open the `index.html` file in your preferred web browser. No special server setup is required as it's a static site.
-
----
-
-## 💡 Future Enhancements
-
-I plan to continuously update this portfolio with new projects, skills, and experiences. Future additions may include:
-
-* More detailed project descriptions or dedicated project pages.
-
-* Integration of blog posts or technical articles.
-
-* Further visual refinements and interactive elements.
-
----
-
-## 🤝 Connect with Me
-
-Shashank Goutam
-[GitHub](https://github.com/ShashankGoutam) | [LinkedIn](https://www.linkedin.com/in/shashank-goutam-735924288)
-
-* **Email:** shashankgoutam73@gmail.com
+- **GitHub:** https://github.com/ShashankGoutam
+- **LinkedIn:** https://www.linkedin.com/in/shashank-goutam-735924288/
+- **Email:** shashankgoutam04@gmail.com
