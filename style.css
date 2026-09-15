@@ -133,8 +133,9 @@ button { font: inherit; }
 .project-card { position: relative; padding: 27px; border: 1px solid var(--line); border-radius: 26px; background: #fff; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; overflow: hidden; }
 .project-card.featured { min-height: 420px; display: flex; flex-direction: column; }
 .project-card.featured::after { content: ''; position: absolute; width: 150px; height: 150px; right: -90px; top: -90px; border-radius: 50%; background: rgba(59,130,246,.08); }
-.project-number { position: absolute; right: 25px; top: 20px; color: #d9e1ea; font-size: 2.4rem; line-height: 1; font-weight: 800; z-index: 1; pointer-events: none; }
+.project-number { position: absolute; right: 25px; top: 20px; color: #d9e1ea; font-size: 2.4rem; line-height: 1; font-weight: 800; z-index: 3; pointer-events: none; }
 .project-top { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.project-card.featured .project-top a { display: none; }
 .project-top a { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; background: #f0f4f8; color: #344255; transition: .2s ease; }
 .project-top a:hover { color: #fff; background: var(--navy); }
 .project-type { color: #2563eb; font-size: .68rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
